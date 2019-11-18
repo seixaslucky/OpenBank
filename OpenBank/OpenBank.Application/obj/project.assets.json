@@ -9382,11 +9382,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Application\\OpenBank.Application.csproj",
+      "projectUniqueName": "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Application\\OpenBank.Application.csproj",
       "projectName": "OpenBank.Application",
-      "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Application\\OpenBank.Application.csproj",
+      "projectPath": "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Application\\OpenBank.Application.csproj",
       "packagesPath": "C:\\Users\\Lucky Seixas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Application\\obj\\",
+      "outputPath": "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucky Seixas\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -9400,14 +9400,14 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\CrossingCutting\\CrossingCutting.csproj": {
-              "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\CrossingCutting\\CrossingCutting.csproj"
+            "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\CrossingCutting\\CrossingCutting.csproj": {
+              "projectPath": "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\CrossingCutting\\CrossingCutting.csproj"
             },
-            "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
-              "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj"
+            "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
+              "projectPath": "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj"
             },
-            "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj": {
-              "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj"
+            "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj": {
+              "projectPath": "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj"
             }
           }
         }
