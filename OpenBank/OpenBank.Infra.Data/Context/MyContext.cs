@@ -10,7 +10,7 @@ namespace OpenBank.Infra.Data.Context
         public MyContext(DbContextOptions<MyContext> options)
              : base(options)
         {
-            Database.EnsureCreated();
+            Database.Migrate();
         }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<AccountClient> AccountClients { get; set; }

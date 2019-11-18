@@ -218,31 +218,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucia\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Lucky Seixas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucia\\source\\repos\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
+      "projectUniqueName": "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
       "projectName": "OpenBank.Domain",
-      "projectPath": "C:\\Users\\lucia\\source\\repos\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
-      "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucia\\source\\repos\\OpenBank\\OpenBank.Domain\\obj\\",
+      "projectPath": "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
+      "packagesPath": "C:\\Users\\Lucky Seixas\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Lucky Seixas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -275,9 +268,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

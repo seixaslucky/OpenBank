@@ -6,3 +6,11 @@ C:\Users\lucia\source\repos\OpenBank\OpenBank.Domain\obj\Debug\netcoreapp3.0\Ope
 C:\Users\lucia\source\repos\OpenBank\OpenBank.Domain\obj\Debug\netcoreapp3.0\OpenBank.Domain.AssemblyInfo.cs
 C:\Users\lucia\source\repos\OpenBank\OpenBank.Domain\obj\Debug\netcoreapp3.0\OpenBank.Domain.dll
 C:\Users\lucia\source\repos\OpenBank\OpenBank.Domain\obj\Debug\netcoreapp3.0\OpenBank.Domain.pdb
+C:\Users\Lucky Seixas\Documents\GitHub\OpenBank\OpenBank\OpenBank.Domain\bin\Debug\netcoreapp3.0\OpenBank.Domain.deps.json
+C:\Users\Lucky Seixas\Documents\GitHub\OpenBank\OpenBank\OpenBank.Domain\bin\Debug\netcoreapp3.0\OpenBank.Domain.dll
+C:\Users\Lucky Seixas\Documents\GitHub\OpenBank\OpenBank\OpenBank.Domain\bin\Debug\netcoreapp3.0\OpenBank.Domain.pdb
+C:\Users\Lucky Seixas\Documents\GitHub\OpenBank\OpenBank\OpenBank.Domain\obj\Debug\netcoreapp3.0\OpenBank.Domain.csprojAssemblyReference.cache
+C:\Users\Lucky Seixas\Documents\GitHub\OpenBank\OpenBank\OpenBank.Domain\obj\Debug\netcoreapp3.0\OpenBank.Domain.AssemblyInfoInputs.cache
+C:\Users\Lucky Seixas\Documents\GitHub\OpenBank\OpenBank\OpenBank.Domain\obj\Debug\netcoreapp3.0\OpenBank.Domain.AssemblyInfo.cs
+C:\Users\Lucky Seixas\Documents\GitHub\OpenBank\OpenBank\OpenBank.Domain\obj\Debug\netcoreapp3.0\OpenBank.Domain.dll
+C:\Users\Lucky Seixas\Documents\GitHub\OpenBank\OpenBank\OpenBank.Domain\obj\Debug\netcoreapp3.0\OpenBank.Domain.pdb

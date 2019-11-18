@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenBank.Domain.Interfaces.Service.Account
+namespace OpenBank.Domain.Interfaces.Service
 {
     public interface IClientService
     {

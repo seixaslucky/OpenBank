@@ -1,9 +1,8 @@
 ﻿using OpenBank.Domain.Entities;
 using OpenBank.Domain.Interfaces;
-using OpenBank.Domain.Interfaces.Service.Account;
+using OpenBank.Domain.Interfaces.Service;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace OpenBank.Service.Services

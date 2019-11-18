@@ -13,8 +13,12 @@ namespace OpenBank.Infra.Data.Context
         {
             builder.ToTable("Agencia");
             builder.HasKey(a => a.Id);
-            builder.Property(a => a.Endereco);
+            builder.Property(a => a.Name);
             builder.Property(a => a.CreatedAt);
+
+            builder.HasData(
+                new Agencia{}
+            );
         }
     }
 }

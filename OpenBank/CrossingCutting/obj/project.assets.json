@@ -2007,10 +2007,7 @@
         },
         "runtime": {
           "bin/placeholder/OpenBank.Domain.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "OpenBank.Infra.Data/1.0.0": {
         "type": "project",
@@ -2026,10 +2023,7 @@
         },
         "runtime": {
           "bin/placeholder/OpenBank.Infra.Data.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "OpenBank.Service/1.0.0": {
         "type": "project",
@@ -2042,10 +2036,7 @@
         },
         "runtime": {
           "bin/placeholder/OpenBank.Service.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -6944,44 +6935,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucia\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Lucky Seixas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucia\\source\\repos\\OpenBank\\CrossingCutting\\CrossingCutting.csproj",
+      "projectUniqueName": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\CrossingCutting\\CrossingCutting.csproj",
       "projectName": "CrossingCutting",
-      "projectPath": "C:\\Users\\lucia\\source\\repos\\OpenBank\\CrossingCutting\\CrossingCutting.csproj",
-      "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucia\\source\\repos\\OpenBank\\CrossingCutting\\obj\\",
+      "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\CrossingCutting\\CrossingCutting.csproj",
+      "packagesPath": "C:\\Users\\Lucky Seixas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\CrossingCutting\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Lucky Seixas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\lucia\\source\\repos\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
-              "projectPath": "C:\\Users\\lucia\\source\\repos\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj"
+            "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
+              "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj"
             },
-            "C:\\Users\\lucia\\source\\repos\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj": {
-              "projectPath": "C:\\Users\\lucia\\source\\repos\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj"
+            "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj"
             },
-            "C:\\Users\\lucia\\source\\repos\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj": {
-              "projectPath": "C:\\Users\\lucia\\source\\repos\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj"
+            "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj": {
+              "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj"
             }
           }
         }
@@ -7011,9 +6995,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
