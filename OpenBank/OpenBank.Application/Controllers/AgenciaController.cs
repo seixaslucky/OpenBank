@@ -11,6 +11,7 @@ namespace OpenBank.Application.Controllers
     [ApiController]
     public class AgenciaController : ControllerBase
     {
+        //todo insert, update, getall, get
         
     }
 }

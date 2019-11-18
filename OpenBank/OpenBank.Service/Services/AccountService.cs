@@ -27,6 +27,9 @@ namespace OpenBank.Service.Services {
         }
 
         public async Task<Account> Post (Account account) {
+            //guarantee  that an account will always start with a balance equal to zerro
+            //and any value that goes in or out exists in db;
+            account.Balance = 0;
             return await _repository.InsertAsync (account);
         }
 
@@ -42,7 +45,7 @@ namespace OpenBank.Service.Services {
 
         }
 
-        //todo insert transactions db methods
+        //todo test transactions db methods
         public async Task<Account> Withdraw (Guid id, decimal value) {
             try {
                 Transaction transaction = new Transaction {
@@ -77,7 +80,7 @@ namespace OpenBank.Service.Services {
             }
         }
 
-        //todo insert transactions db methods
+        //todo test transactions db methods
         public async Task<Account> Deposit (Guid id, decimal value) {
             try {
                 Transaction transaction = new Transaction {
