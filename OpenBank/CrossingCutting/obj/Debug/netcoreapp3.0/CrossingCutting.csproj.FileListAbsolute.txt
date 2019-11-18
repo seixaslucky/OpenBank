@@ -1,0 +1,15 @@
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\bin\Debug\netcoreapp3.0\CrossingCutting.deps.json
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\bin\Debug\netcoreapp3.0\CrossingCutting.dll
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\bin\Debug\netcoreapp3.0\CrossingCutting.pdb
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\bin\Debug\netcoreapp3.0\OpenBank.Domain.dll
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\bin\Debug\netcoreapp3.0\OpenBank.Infra.Data.dll
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\bin\Debug\netcoreapp3.0\OpenBank.Service.dll
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\bin\Debug\netcoreapp3.0\OpenBank.Domain.pdb
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\bin\Debug\netcoreapp3.0\OpenBank.Infra.Data.pdb
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\bin\Debug\netcoreapp3.0\OpenBank.Service.pdb
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\obj\Debug\netcoreapp3.0\CrossingCutting.csprojAssemblyReference.cache
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\obj\Debug\netcoreapp3.0\CrossingCutting.AssemblyInfoInputs.cache
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\obj\Debug\netcoreapp3.0\CrossingCutting.AssemblyInfo.cs
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\obj\Debug\netcoreapp3.0\CrossingCutting.csproj.CopyComplete
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\obj\Debug\netcoreapp3.0\CrossingCutting.dll
+C:\Users\lucia\source\repos\OpenBank\CrossingCutting\obj\Debug\netcoreapp3.0\CrossingCutting.pdb

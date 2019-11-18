@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OpenBank.Domain\OpenBank.Domain.csproj" />
+    <ProjectReference Include="..\OpenBank.Infra.Data\OpenBank.Infra.Data.csproj" />
+    <ProjectReference Include="..\OpenBank.Service\OpenBank.Service.csproj" />
+  </ItemGroup>
+
+</Project>

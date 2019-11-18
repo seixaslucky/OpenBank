@@ -1,0 +1,11 @@
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\bin\Debug\netcoreapp3.0\OpenBank.Infra.Data.deps.json
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\bin\Debug\netcoreapp3.0\OpenBank.Infra.Data.dll
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\bin\Debug\netcoreapp3.0\OpenBank.Infra.Data.pdb
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\bin\Debug\netcoreapp3.0\OpenBank.Domain.dll
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\bin\Debug\netcoreapp3.0\OpenBank.Domain.pdb
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\obj\Debug\netcoreapp3.0\OpenBank.Infra.Data.csprojAssemblyReference.cache
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\obj\Debug\netcoreapp3.0\OpenBank.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\obj\Debug\netcoreapp3.0\OpenBank.Infra.Data.AssemblyInfo.cs
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\obj\Debug\netcoreapp3.0\OpenBank.Infra.Data.csproj.CopyComplete
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\obj\Debug\netcoreapp3.0\OpenBank.Infra.Data.dll
+C:\Users\lucia\source\repos\OpenBank\OpenBank.Infra.Data\obj\Debug\netcoreapp3.0\OpenBank.Infra.Data.pdb
