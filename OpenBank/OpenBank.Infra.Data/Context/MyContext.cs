@@ -16,7 +16,7 @@ namespace OpenBank.Infra.Data.Context
         public DbSet<AccountClient> AccountClients { get; set; }
         public DbSet<Agencia> Agencias { get; set; }
         public DbSet<Client> Clients { get; set; }
-        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Movement> Transactions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace OpenBank.Infra.Data.Context
             modelBuilder.ApplyConfiguration(new AccountClientEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new AgenciaEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new ClientEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new TransactionEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new MovementEntityTypeConfiguration());
 
         }
     }

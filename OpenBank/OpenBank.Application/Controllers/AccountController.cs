@@ -17,7 +17,7 @@ namespace OpenBank.Application.Controllers {
             _service = service;
         }
 
-//todo insert, put, delete;
+        //todo insert, put, delete;
 
         [HttpGet]
         [Route ("{id}", Name = "GetWithId")]
@@ -33,15 +33,43 @@ namespace OpenBank.Application.Controllers {
         }
 
         [HttpPut]
-        public async Task<ActionResult> Withdraw (Guid id) {
+        public async Task<ActionResult> Withdraw (Guid id, decimal value) {
+            if (!ModelState.IsValid) {
+                return BadRequest (ModelState);
+            }
 
-            return null;
+            try {
+                return Ok (await _service.Withdraw (id, value));
+            } catch (ArgumentException ex) {
+                return StatusCode ((int) HttpStatusCode.InternalServerError, ex.Message);
+            }
         }
 
         [HttpPut]
-        public async Task<ActionResult> Deposit (Guid id) {
+        public async Task<ActionResult> Deposit (Guid id, decimal value) {
+            if (!ModelState.IsValid) {
+                return BadRequest (ModelState);
+            }
 
-            return null;
+            try {
+                return Ok (await _service.Deposit (id, value));
+            } catch (ArgumentException ex) {
+                return StatusCode ((int) HttpStatusCode.InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route ("{id}")]
+        public async Task<ActionResult> GetHistory (Guid id) {
+            if (!ModelState.IsValid) {
+                return BadRequest (ModelState);
+            }
+            try {
+                var result = await _service.Get (id);
+                return Ok (result.Movements);
+            } catch (ArgumentException ex) {
+                return StatusCode ((int) HttpStatusCode.InternalServerError, ex.Message);
+            }
         }
     }
 }

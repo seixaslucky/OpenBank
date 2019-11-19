@@ -6,18 +6,17 @@ using System.Collections.Generic;
 using System.Text;
 namespace OpenBank.Infra.Data.Context
 {
-    internal class TransactionEntityTypeConfiguration : IEntityTypeConfiguration<Transaction>
+    internal class MovementEntityTypeConfiguration : IEntityTypeConfiguration<Movement>
     {
-        public void Configure(EntityTypeBuilder<Transaction> builder)
+        public void Configure(EntityTypeBuilder<Movement> builder)
         {
-            builder.ToTable("Transaction");
+            builder.ToTable("Movement");
             builder.HasKey(t => t.Id);
             builder.Property(t => t.CreatedAt);
             builder.Property(t => t.Success);
             builder.Property(t => t.Type);
             builder.Property(t => t.Value);
-            builder.HasOne(t => t.From).WithMany(c => c.TransactionsFrom).HasForeignKey(a => a.IdAccountFrom);
-            builder.HasOne(t => t.To).WithMany(c => c.TransactionsTo).HasForeignKey(a => a.IdAccountTo);
+            builder.HasOne(t => t.Account).WithMany(c => c.Movements).HasForeignKey(a => a.IdAccount);
         }
     }
 }

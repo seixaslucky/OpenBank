@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OpenBank.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace OpenBank.Infra.Data.Context
 {
@@ -14,11 +11,9 @@ namespace OpenBank.Infra.Data.Context
             builder.ToTable("Agencia");
             builder.HasKey(a => a.Id);
             builder.Property(a => a.Name);
+            builder.Property(a => a.Code).ValueGeneratedOnAdd();
+            builder.HasIndex(a => a.Code).IsUnique();
             builder.Property(a => a.CreatedAt);
-
-            builder.HasData(
-                new Agencia{}
-            );
         }
     }
 }

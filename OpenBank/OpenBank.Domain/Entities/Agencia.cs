@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenBank.Domain.Entities
-{
-    public class Agencia : BaseEntity
-    {
+namespace OpenBank.Domain.Entities {
+    public class Agencia : BaseEntity {
         public string Name { get; set; }
+        public int Code { get; set; }
         public virtual ICollection<Account> Accounts { get; set; }
     }
 }

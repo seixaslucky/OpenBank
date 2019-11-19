@@ -10,7 +10,7 @@ namespace OpenBank.Domain.Interfaces.Service
     {
         Task<Client> Get(Guid id);
         Task<IEnumerable<Client>> GetAll();
-        Task<Client> Post(Client client);
+        Task<Client> Post(Client client, Guid idAgencia);
         Task<Client> Put(Client client);
         Task<bool> Delete(Guid id);
     }

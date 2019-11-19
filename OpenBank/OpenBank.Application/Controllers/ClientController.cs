@@ -53,7 +53,7 @@ namespace OpenBank.Application.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] Client client)
+        public async Task<ActionResult> Post([FromBody] Client client, Guid idAgencia)
         {
             if (!ModelState.IsValid)
             {
@@ -61,7 +61,7 @@ namespace OpenBank.Application.Controllers
             }
             try
             {
-                var result = await _service.Post(client);
+                var result = await _service.Post(client, idAgencia);
                 if (result != null)
                 {
                     return Created(new Uri(Url.Link("GetWithId", new { id = result })), result);

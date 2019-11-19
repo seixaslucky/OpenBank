@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace OpenBank.Service.Services
 {
-    public class TransactionService : ITransactionService
+    public class MovementService : IMovementService
     {
-         private IRepository<Transaction> _repository;
-        public TransactionService(IRepository<Transaction> repository)
+         private IRepository<Movement> _repository;
+        public MovementService(IRepository<Movement> repository)
         {
             _repository = repository;
         }
@@ -19,24 +19,24 @@ namespace OpenBank.Service.Services
             return await _repository.RemoveAsync(id);
         }
 
-        public async Task<Transaction> Get(Guid id)
+        public async Task<Movement> Get(Guid id)
         {
             return await _repository.SelectAsync(id);
         }
 
-        public async Task<IEnumerable<Transaction>> GetAll()
+        public async Task<IEnumerable<Movement>> GetAll()
         {
             return  await _repository.SelectAsync();
         }
 
-        public async Task<Transaction> Post(Transaction transaction)
+        public async Task<Movement> Post(Movement Movement)
         {
-            return await _repository.InsertAsync(transaction);
+            return await _repository.InsertAsync(Movement);
         }
 
-        public async Task<Transaction> Put(Transaction transaction)
+        public async Task<Movement> Put(Movement Movement)
         {
-            return await _repository.UpdateAsync(transaction);
+            return await _repository.UpdateAsync(Movement);
         }
     }
 }

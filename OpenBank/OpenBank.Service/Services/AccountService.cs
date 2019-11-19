@@ -9,8 +9,8 @@ using OpenBank.Domain.Interfaces.Service;
 namespace OpenBank.Service.Services {
     public class AccountService : IAccountService {
         private IRepository<Account> _repository;
-        private IRepository<Transaction> _repositoryTransaction;
-        public AccountService (IRepository<Account> repository, IRepository<Transaction> repositoryTransaction) {
+        private IRepository<Movement> _repositoryTransaction;
+        public AccountService (IRepository<Account> repository, IRepository<Movement> repositoryTransaction) {
             _repository = repository;
             _repositoryTransaction = repositoryTransaction;
         }
@@ -48,7 +48,8 @@ namespace OpenBank.Service.Services {
         //todo test transactions db methods
         public async Task<Account> Withdraw (Guid id, decimal value) {
             try {
-                Transaction transaction = new Transaction {
+                Movement transaction = new Movement {
+                    IdAccount = id,
                     Type = 0,
                     Value = value,
                     Success = false
@@ -83,7 +84,8 @@ namespace OpenBank.Service.Services {
         //todo test transactions db methods
         public async Task<Account> Deposit (Guid id, decimal value) {
             try {
-                Transaction transaction = new Transaction {
+                Movement transaction = new Movement {
+                    IdAccount = id,
                     Type = 1,
                     Value = value,
                     Success = false
