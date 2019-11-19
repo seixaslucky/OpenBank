@@ -38,5 +38,9 @@ namespace OpenBank.Service.Services
         {
             return await _repository.UpdateAsync(Movement);
         }
+
+        public async Task<IEnumerable<Movement>> GetByDateInerval(DateTime startDate, DateTime endDate, Guid idAccount){
+            return await _repository.Find(x => x.CreatedAt>= startDate && x.CreatedAt<=endDate && x.IdAccount == idAccount);
+        }
     }
 }

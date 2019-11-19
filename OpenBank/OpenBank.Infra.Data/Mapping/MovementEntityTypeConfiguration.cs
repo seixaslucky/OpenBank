@@ -12,7 +12,9 @@ namespace OpenBank.Infra.Data.Context
         {
             builder.ToTable("Movement");
             builder.HasKey(t => t.Id);
+            builder.Property(t => t.Id).ValueGeneratedOnAdd();
             builder.Property(t => t.CreatedAt);
+            builder.Property(t => t.IdAccount);
             builder.Property(t => t.Success);
             builder.Property(t => t.Type);
             builder.Property(t => t.Value);

@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 namespace OpenBank.Domain.Interfaces.Service {
     public interface IAccountService {
         Task<Account> Get (Guid id);
+        Task<Account> Get (int agenciaCode, int accountCode, string password);
         Task<IEnumerable<Account>> GetAll ();
-        Task<Account> Post (Account client);
+        Task<Account> Post (Account account, Client client);
         Task<Account> Put (Account client);
         Task<bool> Delete (Guid id);
-        Task<Account> Withdraw(Guid id, decimal value);
-        Task<Account> Deposit(Guid id, decimal value);
+        Task<Account> Withdraw(Guid id, decimal value, string password);
+        Task<Account> Deposit(Guid id, decimal value, string password);
+        Task<Account> AddClientToAccount(Guid id, Client client, string password);
     }
 }

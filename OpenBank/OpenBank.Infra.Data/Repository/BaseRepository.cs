@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using OpenBank.Domain.Entities;
 using OpenBank.Domain.Interfaces;
 using OpenBank.Infra.Data.Context;
-using System.Linq;
 
 namespace OpenBank.Infra.Data.Repository {
     public class BaseRepository<T> : IRepository<T> where T : BaseEntity {
@@ -19,9 +20,6 @@ namespace OpenBank.Infra.Data.Repository {
 
         public async Task<T> InsertAsync (T obj) {
             try {
-                if (obj.Id == Guid.Empty) {
-                    obj.Id = Guid.NewGuid ();
-                }
                 obj.CreatedAt = DateTime.UtcNow;
                 _dataset.Add (obj);
                 await _context.SaveChangesAsync ();
@@ -62,13 +60,13 @@ namespace OpenBank.Infra.Data.Repository {
             }
         }
 
-        public async Task<IEnumerable<T>> SelectAsync (DateTime startDate, DateTime endDate) {
-            try {
-                return await _dataset.Where(t => DateTime.Compare(t.CreatedAt.Value,startDate)>=0).ToListAsync();
-            } catch (Exception ex) {
-                throw ex;
-            }
-        }
+        // public async Task<IEnumerable<T>> FindAsync (DateTime startDate, DateTime endDate) {
+        //     try {
+        //         return await _dataset.Where(t => DateTime.Compare(t.CreatedAt.Value,startDate)>=0).ToListAsync();
+        //     } catch (Exception ex) {
+        //         throw ex;
+        //     }
+        // }
 
         public async Task<T> UpdateAsync (T obj) {
             try {
@@ -89,6 +87,14 @@ namespace OpenBank.Infra.Data.Repository {
 
         public async Task<bool> ExistAsync (Guid id) {
             return await _dataset.AnyAsync (t => t.Id == id);
+        }
+
+        public virtual async Task<IEnumerable<T>> Find (Expression<Func<T, bool>> predicate, string includeProperties = null) {
+            try {
+                return await _dataset.Where (predicate).ToListAsync ();
+            } catch (Exception ex) {
+                throw ex;
+            }
         }
     }
 }

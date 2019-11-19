@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
+using System.Linq;
 using System.Threading.Tasks;
 using OpenBank.Domain.Entities;
 using OpenBank.Domain.Interfaces;
 using OpenBank.Domain.Interfaces.Service;
+using OpenBank.Service.Services.Password;
 
 namespace OpenBank.Service.Services {
     public class AccountService : IAccountService {
@@ -22,14 +23,31 @@ namespace OpenBank.Service.Services {
             return await _repository.SelectAsync (id);
         }
 
+        public async Task<Account> Get (int agenciaCode, int accountCode, string password) {
+            var result = await _repository.Find (x => x.Code == accountCode && x.Agencia.Code == agenciaCode);
+            if (result == null || result.Count () == 0) throw new ArgumentException ("Account not Found");
+            PasswordHasher passHash = new PasswordHasher ();
+            bool verified;
+            bool needsUpdate;
+            (verified, needsUpdate) = passHash.Check (result.First ().Password, password);
+            if (!needsUpdate) throw new ArgumentException ("Password Needs Update");
+            if (!verified) throw new ArgumentException ("Password Incorrect");
+            return result.First ();
+        }
+
         public async Task<IEnumerable<Account>> GetAll () {
             return await _repository.SelectAsync ();
         }
 
-        public async Task<Account> Post (Account account) {
+        public async Task<Account> Post (Account account, Client client) {
             //guarantee  that an account will always start with a balance equal to zerro
             //and any value that goes in or out exists in db;
             account.Balance = 0;
+            AccountClient accountClient = new AccountClient {
+                Account = account,
+                Client = client
+            };
+            account.AccountClients = new List<AccountClient> { { accountClient } };
             return await _repository.InsertAsync (account);
         }
 
@@ -46,7 +64,7 @@ namespace OpenBank.Service.Services {
         }
 
         //todo test transactions db methods
-        public async Task<Account> Withdraw (Guid id, decimal value) {
+        public async Task<Account> Withdraw (Guid id, decimal value, string password) {
             try {
                 Movement transaction = new Movement {
                     IdAccount = id,
@@ -62,9 +80,18 @@ namespace OpenBank.Service.Services {
                 if (result == null) {
                     throw new ArgumentException ("Account not found");
                 }
+
+                //verifies password
+                PasswordHasher passHash = new PasswordHasher ();
+                bool verified;
+                bool needsUpdate;
+                (verified, needsUpdate) = passHash.Check (result.Password, password);
+                if (!needsUpdate) throw new ArgumentException ("Password Needs Update");
+                if (!verified) throw new ArgumentException ("Password Incorrect");
                 if (result.Balance - value < 0) {
                     throw new ArgumentException ("not enough Balance");
                 }
+
                 result.Balance -= value;
                 var update = await _repository.UpdateAsync (result);
 
@@ -82,7 +109,7 @@ namespace OpenBank.Service.Services {
         }
 
         //todo test transactions db methods
-        public async Task<Account> Deposit (Guid id, decimal value) {
+        public async Task<Account> Deposit (Guid id, decimal value, string password) {
             try {
                 Movement transaction = new Movement {
                     IdAccount = id,
@@ -98,6 +125,18 @@ namespace OpenBank.Service.Services {
                 if (result == null) {
                     throw new ArgumentException ("Account not found");
                 }
+
+                //verifies password
+                PasswordHasher passHash = new PasswordHasher ();
+                bool verified;
+                bool needsUpdate;
+                (verified, needsUpdate) = passHash.Check (result.Password, password);
+                if (!needsUpdate) throw new ArgumentException ("Password Needs Update");
+                if (!verified) throw new ArgumentException ("Password Incorrect");
+                if (result.Balance - value < 0) {
+                    throw new ArgumentException ("not enough Balance");
+                }
+
                 result.Balance += value;
                 var update = await _repository.UpdateAsync (result);
                 if (update == null) {
@@ -111,6 +150,27 @@ namespace OpenBank.Service.Services {
             } catch (Exception ex) {
                 throw ex;
             }
+        }
+
+        public async Task<Account> AddClientToAccount (Guid id, Client client, string password) {
+            var result = await _repository.SelectAsync (id);
+            if (result == null) throw new ArgumentException ("Account not Found");
+
+            PasswordHasher passHash = new PasswordHasher ();
+            bool verified;
+            bool needsUpdate;
+            (verified, needsUpdate) = passHash.Check (result.Password, password);
+            if (!needsUpdate) throw new ArgumentException ("Password Needs Update");
+            if (!verified) throw new ArgumentException ("Password Incorrect");
+
+            AccountClient accountClient = new AccountClient {
+                Account = result,
+                Client = client
+            };
+
+            result.AccountClients.Add (accountClient);
+
+            return await _repository.UpdateAsync (result);
         }
     }
 }

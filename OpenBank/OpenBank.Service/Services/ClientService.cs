@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Linq;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using OpenBank.Domain.Entities;
@@ -19,29 +20,17 @@ namespace OpenBank.Service.Services {
             return await _repository.SelectAsync (id);
         }
 
+        public async Task<Client> Get (string cpf) {
+            var result = await _repository.Find (x => x.Cpf == cpf);
+            if(result.FirstOrDefault() == null) throw new ArgumentException("Client do not exist");
+            return result.First();
+        }
+
         public async Task<IEnumerable<Client>> GetAll () {
             return await _repository.SelectAsync ();
         }
 
-        public async Task<Client> Post (Client client, Guid idAgencia) {
-            //generate a new account when a client is created
-            Account account = new Account {
-                Id = Guid.NewGuid (),
-                Active = true,
-                IdAgencia = idAgencia,
-                Balance = 0,
-                CreatedAt = DateTime.UtcNow
-            };
-
-            AccountClient accountClient = new AccountClient{
-                Id = Guid.NewGuid(),
-                Account = account,
-                Client = client,
-                CreatedAt = DateTime.UtcNow
-            };
-
-            client.AccountClients = new List<AccountClient>();
-            client.AccountClients.Add(accountClient);
+        public async Task<Client> Post (Client client) {
             return await _repository.InsertAsync (client);
         }
 
