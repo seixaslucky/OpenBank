@@ -39,16 +39,25 @@ namespace OpenBank.Service.Services {
             return await _repository.SelectAsync ();
         }
 
-        public async Task<Account> Post (Account account, Client client) {
+        public async Task<Account> Post (Agencia agencia, Client client, string password) {
             //guarantee  that an account will always start with a balance equal to zerro
             //and any value that goes in or out exists in db;
-            account.Balance = 0;
-            AccountClient accountClient = new AccountClient {
-                Account = account,
-                Client = client
+
+            string hashPassword = "";
+            Account account = new Account {
+                Active = true,
+                Balance = 0,
+                IdAgencia = agencia.Id,
+                Password = hashPassword,
             };
-            account.AccountClients = new List<AccountClient> { { accountClient } };
-            return await _repository.InsertAsync (account);
+            var result = await _repository.InsertAsync (account);
+            if(result == null) throw new Exception("Internal Error");
+            AccountClient accountClient = new AccountClient{
+                IdAccount = result.Id,
+                IdClient = client.Id
+            };
+            result.AccountClients = new List<AccountClient> { { accountClient } };
+            return await _repository.UpdateAsync (account);
         }
 
         public async Task<Account> Put (Account account) {

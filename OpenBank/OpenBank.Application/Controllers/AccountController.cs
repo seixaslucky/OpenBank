@@ -11,9 +11,11 @@ namespace OpenBank.Application.Controllers {
     public class AccountController : ControllerBase {
         private IAccountService _service;
         private IClientService _serviceClient;
-        public AccountController (IAccountService service, IClientService serviceClient) {
+        private IAgenciaService _serviceAgencia;
+        public AccountController (IAccountService service, IClientService serviceClient, IAgenciaService serviceAgencia) {
             _service = service;
             _serviceClient = serviceClient;
+            _serviceAgencia = serviceAgencia;
         }
 
         [HttpGet]
@@ -29,15 +31,17 @@ namespace OpenBank.Application.Controllers {
         }
 
         [HttpPost]
-        public async Task<ActionResult> CreateAccount ([FromBody] Account account, Guid idClient) {
+        public async Task<ActionResult> CreateAccount (Guid idAgencia, Guid idClient, string password) {
             if (!ModelState.IsValid) {
                 return BadRequest (ModelState);
             }
-
+            if(String.IsNullOrEmpty(password)) return StatusCode ((int) HttpStatusCode.BadRequest, "Password invalid");
             try {
                 Client client = await _serviceClient.Get(idClient);
                 if(client == null) return StatusCode ((int) HttpStatusCode.NotFound, "Client not found");
-                return Ok (await _service.Post (account, client));
+                Agencia agencia = await _serviceAgencia.Get(idAgencia);
+                if(client == null) return StatusCode ((int) HttpStatusCode.NotFound, "Agencia not found");
+                return Ok (await _service.Post (agencia, client, password));
             } catch (ArgumentException ex) {
                 return StatusCode ((int) HttpStatusCode.InternalServerError, ex.Message);
             }

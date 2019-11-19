@@ -9,7 +9,7 @@ namespace OpenBank.Domain.Interfaces.Service {
         Task<Account> Get (Guid id);
         Task<Account> Get (int agenciaCode, int accountCode, string password);
         Task<IEnumerable<Account>> GetAll ();
-        Task<Account> Post (Account account, Client client);
+        Task<Account> Post (Agencia agencia, Client client, string password);
         Task<Account> Put (Account client);
         Task<bool> Delete (Guid id);
         Task<Account> Withdraw(Guid id, decimal value, string password);
