@@ -13,11 +13,11 @@ namespace OpenBank.Infra.Data.Context
         {
             builder.ToTable("Client");
             builder.HasKey(c => c.Id);
-            builder.Property(c => c.Id).ValueGeneratedOnAdd();
+            builder.Property(c => c.Id);
             builder.Property(c => c.Name).IsRequired();
             builder.Property(c => c.BirthDate).IsRequired();
             builder.HasIndex(c => c.Cpf).IsUnique();
-            builder.Property(c => c.Cpf);
+            builder.Property(c => c.Cpf).IsRequired();
             builder.Property(c => c.CreatedAt);
         }
     }

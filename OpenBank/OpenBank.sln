@@ -15,15 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{ACD73C98-D7BA-4F97-AC4D-E48572ED3B04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBank.Application", "OpenBank.Application\OpenBank.Application.csproj", "{10B1564E-378E-48FD-9DBA-5D02D3ABEBFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBank.Application", "OpenBank.Application\OpenBank.Application.csproj", "{10B1564E-378E-48FD-9DBA-5D02D3ABEBFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBank.Domain", "OpenBank.Domain\OpenBank.Domain.csproj", "{A33699B9-20DA-455D-BA93-FE8C14CA94C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBank.Domain", "OpenBank.Domain\OpenBank.Domain.csproj", "{A33699B9-20DA-455D-BA93-FE8C14CA94C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBank.Service", "OpenBank.Service\OpenBank.Service.csproj", "{CDFD9E7B-A9EE-42EB-9EC5-66BFDF92ACAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBank.Service", "OpenBank.Service\OpenBank.Service.csproj", "{CDFD9E7B-A9EE-42EB-9EC5-66BFDF92ACAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBank.Infra.Data", "OpenBank.Infra.Data\OpenBank.Infra.Data.csproj", "{6FEA53DB-4AE4-45D4-9B19-CF46E1F71CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBank.Infra.Data", "OpenBank.Infra.Data\OpenBank.Infra.Data.csproj", "{6FEA53DB-4AE4-45D4-9B19-CF46E1F71CF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossingCutting", "CrossingCutting\CrossingCutting.csproj", "{C6BF1853-A2D6-4958-A5CA-ACB02FD0061E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossingCutting", "CrossingCutting\CrossingCutting.csproj", "{C6BF1853-A2D6-4958-A5CA-ACB02FD0061E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Common", "5 - Common", "{CD20934C-5212-4B41-96E0-0E86A08A5531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Enums\Enums.csproj", "{63BBCCE8-6D15-4765-AB72-AC0D21DCB488}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{C6BF1853-A2D6-4958-A5CA-ACB02FD0061E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6BF1853-A2D6-4958-A5CA-ACB02FD0061E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6BF1853-A2D6-4958-A5CA-ACB02FD0061E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63BBCCE8-6D15-4765-AB72-AC0D21DCB488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63BBCCE8-6D15-4765-AB72-AC0D21DCB488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63BBCCE8-6D15-4765-AB72-AC0D21DCB488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63BBCCE8-6D15-4765-AB72-AC0D21DCB488}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,7 @@ Global
 		{CDFD9E7B-A9EE-42EB-9EC5-66BFDF92ACAB} = {2A725062-38AA-4C78-8158-7DAF4792693C}
 		{6FEA53DB-4AE4-45D4-9B19-CF46E1F71CF2} = {B4951BB6-6B47-41CD-ACE3-FE871422B319}
 		{C6BF1853-A2D6-4958-A5CA-ACB02FD0061E} = {ACD73C98-D7BA-4F97-AC4D-E48572ED3B04}
+		{63BBCCE8-6D15-4765-AB72-AC0D21DCB488} = {CD20934C-5212-4B41-96E0-0E86A08A5531}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C2498A0F-9195-4942-BA5B-775E6D836190}

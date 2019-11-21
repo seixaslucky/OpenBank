@@ -31,6 +31,7 @@ namespace OpenBank.Service.Services
 
         public async Task<Movement> Post(Movement Movement)
         {
+            Movement.Id = Guid.NewGuid();
             return await _repository.InsertAsync(Movement);
         }
 

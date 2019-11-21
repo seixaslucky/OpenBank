@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using OpenBank.Domain.Entities;
 using OpenBank.Domain.Interfaces.Service;
+using OpenBank.Domain.Models;
 
 namespace OpenBank.Application.Controllers {
     [Route ("api/[controller]")]
@@ -13,10 +14,9 @@ namespace OpenBank.Application.Controllers {
         public ClientController (IClientService service) {
             _service = service;
         }
-        //todo criar view models para vizualização de clients
 
         [HttpGet]
-        [Route ("{id}", Name = "GetWithId")]
+        [Route ("{id}", Name = "GetClientWithId")]
         public async Task<ActionResult> Get (Guid id) {
             if (!ModelState.IsValid) {
                 return BadRequest (ModelState);
@@ -29,49 +29,114 @@ namespace OpenBank.Application.Controllers {
         }
 
         [HttpGet]
-        [Route ("{cpf}", Name = "GetWithCpf")]
-        public async Task<ActionResult> Get (string cpf) {
-            if (!ModelState.IsValid) {
-                return BadRequest (ModelState);
+        [Route ("getbycpf{cpf}", Name = "GetWithCpf")]
+        public async Task<ActionResult> GetByCpf(string cpf)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
             }
-            try {
-                return Ok (await _service.Get (cpf));
-            } catch (ArgumentException ex) {
-                return StatusCode ((int) HttpStatusCode.InternalServerError, ex.Message);
+            try
+            {
+                var result = await _service.Get(cpf);
+
+                ClientModel clientModel = new ClientModel
+                {
+                    Id = result.Id,
+                    CreatedAt = result.CreatedAt,
+                    BirthDate = result.BirthDate,
+                    Cpf = result.Cpf,
+                    Email = result.Email,
+                    Name = result.Name
+                };
+                return Ok(clientModel);
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post ([FromBody] Client client) {
-            if (!ModelState.IsValid) {
-                return BadRequest (ModelState);
+        public async Task<ActionResult> Post([FromBody] ClientModel client)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
             }
-            try {
-                var result = await _service.Post (client);
-                if (result != null) {
-                    return Created (new Uri (Url.Link ("GetWithId", new { id = result })), result);
-                } else {
-                    return BadRequest ();
+            try
+            {
+                Client clienttoInsert = new Client
+                {
+                    BirthDate = client.BirthDate,
+                    Cpf = client.Cpf,
+                    Email = client.Email,
+                    Name = client.Name
+                };
+                var result = await _service.Post(clienttoInsert);
+                if (result != null)
+                {
+                    ClientModel clientModel = new ClientModel
+                    {
+                        Id = result.Id,
+                        CreatedAt = result.CreatedAt,
+                        BirthDate = result.BirthDate,
+                        Cpf = result.Cpf,
+                        Email = result.Email,
+                        Name = result.Name
+                    };
+                    return Created(new Uri(Url.Link("GetClientWithId", new { id = clientModel.Id })), clientModel);
                 }
-            } catch (ArgumentException ex) {
-                return StatusCode ((int) HttpStatusCode.InternalServerError, ex.Message);
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
         [HttpPut]
-        public async Task<ActionResult> Put ([FromBody] Client client) {
-            if (!ModelState.IsValid) {
-                return BadRequest (ModelState);
+        public async Task<ActionResult> Put([FromBody] ClientModel client)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
             }
-            try {
-                var result = await _service.Put (client);
-                if (result != null) {
-                    return Ok (result);
-                } else {
-                    return BadRequest ();
+            try
+            {
+                Client clienttoUpdate = new Client
+                {
+                    Id = client.Id,
+                    BirthDate = client.BirthDate,
+                    Cpf = client.Cpf,
+                    Email = client.Email,
+                    Name = client.Name
+                };
+                var result = await _service.Put(clienttoUpdate);
+                if (result != null)
+                {
+                    ClientModel clientModel = new ClientModel
+                    {
+                        Id = result.Id,
+                        CreatedAt = result.CreatedAt,
+                        BirthDate = result.BirthDate,
+                        Cpf = result.Cpf,
+                        Email = result.Email,
+                        Name = result.Name
+                    };
+                    return Ok(clientModel);
                 }
-            } catch (ArgumentException ex) {
-                return StatusCode ((int) HttpStatusCode.InternalServerError, ex.Message);
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
             }
         }
     }

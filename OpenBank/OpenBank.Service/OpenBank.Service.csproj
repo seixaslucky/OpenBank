@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Enums\Enums.csproj" />
     <ProjectReference Include="..\OpenBank.Domain\OpenBank.Domain.csproj" />
   </ItemGroup>
 

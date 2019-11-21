@@ -61,6 +61,16 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+      "Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Enums.dll": {}
+        }
+      },
       "OpenBank.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
@@ -72,7 +82,10 @@
         },
         "runtime": {
           "bin/placeholder/OpenBank.Domain.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -224,6 +237,11 @@
         "version.txt"
       ]
     },
+    "Enums/1.0.0": {
+      "type": "project",
+      "path": "../Enums/Enums.csproj",
+      "msbuildProject": "../Enums/Enums.csproj"
+    },
     "OpenBank.Domain/1.0.0": {
       "type": "project",
       "path": "../OpenBank.Domain/OpenBank.Domain.csproj",
@@ -232,35 +250,46 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
+      "Enums >= 1.0.0",
       "OpenBank.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucky Seixas\\.nuget\\packages\\": {}
+    "C:\\Users\\lucia\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj",
+      "projectUniqueName": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj",
       "projectName": "OpenBank.Service",
-      "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj",
-      "packagesPath": "C:\\Users\\Lucky Seixas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\obj\\",
+      "projectPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\OpenBank.Service.csproj",
+      "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Service\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lucky Seixas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
-              "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj"
+            "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\Enums\\Enums.csproj": {
+              "projectPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\Enums\\Enums.csproj"
+            },
+            "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
+              "projectPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj"
             }
           }
         }
@@ -284,6 +313,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

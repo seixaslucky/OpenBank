@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using OpenBank.Domain.Entities;
 using OpenBank.Infra.Data.Context.EntitiesConfiguration;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace OpenBank.Infra.Data.Context
 {
@@ -10,7 +11,7 @@ namespace OpenBank.Infra.Data.Context
         public MyContext(DbContextOptions<MyContext> options)
              : base(options)
         {
-            Database.Migrate();
+            Database.EnsureCreated();
         }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<AccountClient> AccountClients { get; set; }

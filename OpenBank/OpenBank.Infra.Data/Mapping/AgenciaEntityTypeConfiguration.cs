@@ -10,8 +10,8 @@ namespace OpenBank.Infra.Data.Context
         {
             builder.ToTable("Agencia");
             builder.HasKey(a => a.Id);
-            builder.Property(a => a.Id).ValueGeneratedOnAdd();
-            builder.Property(a => a.Name);
+            builder.Property(a => a.Id);
+            builder.Property(a => a.Name).IsRequired();
             builder.Property(a => a.Code).ValueGeneratedOnAdd();
             builder.HasIndex(a => a.Code).IsUnique();
             builder.Property(a => a.CreatedAt);

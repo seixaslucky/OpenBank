@@ -1,4 +1,5 @@
 ﻿using OpenBank.Domain.Entities;
+using OpenBank.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

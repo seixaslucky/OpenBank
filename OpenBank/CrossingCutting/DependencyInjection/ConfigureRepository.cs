@@ -16,7 +16,7 @@ namespace CrossingCutting.DependencyInjection
             //serviceCollection.AddScoped<IClientService, ClientService>();
             serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             serviceCollection.AddDbContext<MyContext>(
-                options => options.UseSqlServer("Server=LSEIXAS;Database=openBankAPI;User Id=sa;Password=@dmin123")
+                options => options.UseSqlServer("Server=DESKTOP-EB857DI;Database=openBankAPI;User Id=sa;Password=@dmin123")
                 );
 
         }

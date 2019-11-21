@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj": {}
+    "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
+    "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
         "projectName": "OpenBank.Domain",
-        "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
-        "packagesPath": "C:\\Users\\Lucky Seixas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\obj\\",
+        "projectPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
+        "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lucky Seixas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,6 +58,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -60,29 +69,35 @@
         }
       }
     },
-    "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj": {
+    "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj",
         "projectName": "OpenBank.Infra.Data",
-        "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\Lucky Seixas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\obj\\",
+        "projectPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\OpenBank.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Lucky Seixas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
-                "projectPath": "C:\\Users\\Lucky Seixas\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj"
+              "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
+                "projectPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj"
               }
             }
           }
@@ -97,6 +112,12 @@
         "netcoreapp3.0": {
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.0, )"
             },
@@ -120,6 +141,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

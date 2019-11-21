@@ -31,6 +31,7 @@ namespace OpenBank.Service.Services
 
         public async Task<Agencia> Post(Agencia agencia)
         {
+            agencia.Id = Guid.NewGuid();
             return await _repository.InsertAsync(agencia);
         }
 

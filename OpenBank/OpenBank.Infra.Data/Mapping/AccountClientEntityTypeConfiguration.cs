@@ -31,13 +31,12 @@ namespace OpenBank.Infra.Data.Context.EntitiesConfiguration {
         public void Configure (EntityTypeBuilder<AccountClient> builder) {
             builder.ToTable ("AccountClient");
             builder.HasKey (a => a.Id);
-            builder.Property(a => a.Id).ValueGeneratedOnAdd();
+            builder.Property(a => a.Id);
             builder.Property (a => a.CreatedAt);
             builder.Property (a => a.IdAccount);
             builder.Property (a => a.IdClient);
             builder.HasOne (a => a.Account).WithMany (ac => ac.AccountClients).HasForeignKey (a => a.IdAccount);
             builder.HasOne (c => c.Client).WithMany (ac => ac.AccountClients).HasForeignKey (c => c.IdClient);
-
         }
     }
 }

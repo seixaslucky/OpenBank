@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {}
+    "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\Enums\\Enums.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
+    "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\Enums\\Enums.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
-        "projectName": "OpenBank.Domain",
-        "projectPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\OpenBank.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\Enums\\Enums.csproj",
+        "projectName": "Enums",
+        "projectPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\Enums\\Enums.csproj",
         "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\OpenBank.Domain\\obj\\",
+        "outputPath": "C:\\Users\\lucia\\Documents\\GitHub\\OpenBank\\OpenBank\\Enums\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -41,12 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "dependencies": {
-            "FluentValidation.AspNetCore": {
-              "target": "Package",
-              "version": "[8.5.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -58,9 +52,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
