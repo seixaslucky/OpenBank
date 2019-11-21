@@ -8,4 +8,4 @@ I also used dotnet entity framework migrations to generate and update the databa
 
 I implemented swagger to use as a minimal documentation for API use;
 
-To change database connection you need to the paths ".\OpenBank\OpenBank\OpenBank.Infra.Data\Context\MyContext.cs" and ".\OpenBank\OpenBank\CrossingCutting\DependencyInjection\ConfigureRepository.cs" and change the connection strings.
+To change database connection you need to the paths ".\OpenBank\OpenBank\OpenBank.Infra.Data\Context\ContextFactory.cs" and ".\OpenBank\OpenBank\CrossingCutting\DependencyInjection\ConfigureRepository.cs" and change the connection strings.
