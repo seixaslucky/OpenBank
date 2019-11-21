@@ -1,0 +1,8 @@
+C:\Users\lucia\Documents\GitHub\OpenBank\OpenBank\Enums\bin\Debug\netcoreapp3.0\Enums.deps.json
+C:\Users\lucia\Documents\GitHub\OpenBank\OpenBank\Enums\bin\Debug\netcoreapp3.0\Enums.dll
+C:\Users\lucia\Documents\GitHub\OpenBank\OpenBank\Enums\bin\Debug\netcoreapp3.0\Enums.pdb
+C:\Users\lucia\Documents\GitHub\OpenBank\OpenBank\Enums\obj\Debug\netcoreapp3.0\Enums.csprojAssemblyReference.cache
+C:\Users\lucia\Documents\GitHub\OpenBank\OpenBank\Enums\obj\Debug\netcoreapp3.0\Enums.AssemblyInfoInputs.cache
+C:\Users\lucia\Documents\GitHub\OpenBank\OpenBank\Enums\obj\Debug\netcoreapp3.0\Enums.AssemblyInfo.cs
+C:\Users\lucia\Documents\GitHub\OpenBank\OpenBank\Enums\obj\Debug\netcoreapp3.0\Enums.dll
+C:\Users\lucia\Documents\GitHub\OpenBank\OpenBank\Enums\obj\Debug\netcoreapp3.0\Enums.pdb

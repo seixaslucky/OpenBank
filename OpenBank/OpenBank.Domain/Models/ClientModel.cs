@@ -10,4 +10,12 @@ namespace OpenBank.Domain.Models
         public string Cpf { get; set; }
         public DateTime BirthDate { get; set; }
     }
+
+    public class ClientToInsetModel
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Cpf { get; set; }
+        public DateTime BirthDate { get; set; }
+    }
 }

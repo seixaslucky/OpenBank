@@ -66,7 +66,7 @@ namespace OpenBank.Application.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] AgenciaModel agencia)
+        public async Task<ActionResult> Post(string name)
         {
             if (!ModelState.IsValid)
             {
@@ -76,7 +76,7 @@ namespace OpenBank.Application.Controllers
             {
                 Agencia agenciatoInsert = new Agencia
                 {
-                    Name = agencia.Name,
+                    Name = name,
                 };
                 var result = await _service.Post(agenciatoInsert);
                 if (result != null)
@@ -101,7 +101,7 @@ namespace OpenBank.Application.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Put([FromBody] AgenciaModel agencia)
+        public async Task<ActionResult> Put(AgenciaModel agencia)
         {
             if (!ModelState.IsValid)
             {

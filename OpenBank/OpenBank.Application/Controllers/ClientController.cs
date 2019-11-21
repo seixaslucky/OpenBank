@@ -58,7 +58,7 @@ namespace OpenBank.Application.Controllers {
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] ClientModel client)
+        public async Task<ActionResult> Post(ClientToInsetModel client)
         {
             if (!ModelState.IsValid)
             {
@@ -99,7 +99,7 @@ namespace OpenBank.Application.Controllers {
         }
 
         [HttpPut]
-        public async Task<ActionResult> Put([FromBody] ClientModel client)
+        public async Task<ActionResult> Put(ClientModel client)
         {
             if (!ModelState.IsValid)
             {
