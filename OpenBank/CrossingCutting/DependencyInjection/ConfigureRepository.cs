@@ -13,10 +13,10 @@ namespace CrossingCutting.DependencyInjection
     {
         public static void ConfigureDependenciesRepository(IServiceCollection serviceCollection)
         {
-            //serviceCollection.AddScoped<IClientService, ClientService>();
+            var connectionString = "Server=DESKTOP-EB857DI;Database=openBankAPI;User Id=sa;Password=@dmin123";
             serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             serviceCollection.AddDbContext<MyContext>(
-                options => options.UseSqlServer("Server=DESKTOP-EB857DI;Database=openBankAPI;User Id=sa;Password=@dmin123")
+                options => options.UseSqlServer(connectionString)
                 );
 
         }
